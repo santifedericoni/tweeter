@@ -1,0 +1,18 @@
+.nav {
+  display:  flex;
+  justify-content: space-between;
+  height: 120;
+  background-color: #3f29e6;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  padding: 20px 20px 0px 20px;
+}
+
+.nav h1 {
+  color: antiquewhite;
+  font-family: 'Bungee', sans-serif;
+}
+
+.nav h2 {
+  color: antiquewhite;
+  font-size: larger;
+}
