@@ -1,10 +1,10 @@
 .nav {
-  display:  flex;
-  justify-content: space-between;
+  position: fixed;
+  width: 100%;
   height: 120;
-  background-color: #3f29e6;
+  z-index: 999;
+  background-color: #5a46f3;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  padding: 20px 20px 0px 20px;
 }
 
 .nav h1 {
@@ -15,4 +15,9 @@
 .nav h2 {
   color: antiquewhite;
   font-size: larger;
+}
+
+.navBar {
+  display:  flex;
+  justify-content: space-between;
 }

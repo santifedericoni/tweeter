@@ -1,11 +1,15 @@
 header{
-  height: 400px;
-  width: 400;
+  height: 450px;
+  width: 100%;
   background-color: #ed962b;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
 
-header div {
+.profile {
+  position: relative;
+  top: 120px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }

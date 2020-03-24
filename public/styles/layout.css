@@ -17,11 +17,18 @@ html {
  */
 
 body {
-  color: #f4f1ec;
+  height: 10000px;
+  background-color: #e7a656;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
 
+main , .navBar{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

@@ -1,0 +1,26 @@
+.new-tweet button {
+  background-color: rgb(47, 47, 212); /* Green */
+  border: none;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
+#tweet-text {
+  width: 100%;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: solid;
+  background-color: transparent;
+  resize: none;
+}
+
+.new-tweet footer{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee';
+}
