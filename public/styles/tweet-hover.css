@@ -1,0 +1,23 @@
+article:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.486);
+  border-color: black;
+}
+article:hover .tag {
+  visibility: visible;
+}
+
+article:hover .fa-flag {
+  color: black;
+}
+
+article:hover .fa-retweet {
+  color: black;
+}
+
+article:hover .fa-heart {
+  color: black;
+}
+
+article:hover .old-tweet-text{
+  border-bottom: 3px solid black;
+}
