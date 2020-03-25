@@ -1,0 +1,59 @@
+article{
+  position: relative;
+  top: 60px;
+  border: 3px solid black;
+  border-radius: 4px;
+
+  padding: 10px 20px ;
+}
+
+article:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.486);
+}
+article:hover .tag {
+  visibility: visible;
+}
+
+
+article section {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.tag {
+  visibility: hidden;
+  position: relative;
+  top: 35px;
+}
+article section div label {
+  position: absolute;
+  top: 45px;
+}
+
+article section div img {
+  width: 100px;
+}
+
+.below {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+#tweet {
+  width: 100%;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: solid;
+  background-color: transparent;
+  resize: none;
+}
+
+.old-tweet-text{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 3px solid black;
+  padding-top: 20px;
+}
+

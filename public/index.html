@@ -15,12 +15,17 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <script src="https://kit.fontawesome.com/61868de8f3.js" crossorigin="anonymous"></script>
+
   </head>
 
   <body>
@@ -35,8 +40,11 @@
     </nav>
 
     <header>
-      <div class='profile'>
+      <div>
           <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
           <h2>Your Name</h2>
       </div>
   </header>
@@ -52,6 +60,28 @@
           </footer>
         </form>
       </section>
+      <article id= 'article-id'>
+        <section>
+          <div>
+            <img src="/images/profile-hex.png"> 
+            <label>Santiago Federiconi</label>
+          </div>
+          <div>
+            <label class="tag">@saanty87</label>
+          </div>
+        </section>
+        <section class= 'old-tweet-text'>
+          <label>this is an old tweet shared </label>
+        </section>
+        <section class="below">
+          <label>10 days ago</label>
+          <section>
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet "></i>
+            <i class="fas fa-heart"></i>
+          </section>
+        </section>
+      </article>
     </main>
   </body>
 </html>
