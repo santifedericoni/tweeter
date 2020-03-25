@@ -9,7 +9,7 @@
 //import { text } from "express";
 
 $(document).ready(function() {
-
+  const $form = $('form');
   const data = [
     {
       "user": {
@@ -84,4 +84,22 @@ $(document).ready(function() {
   };
 
   renderTweets(data);
+
+  $form.on('submit', (event) => {
+    event.preventDefault();
+    const formData = $form.serialize();
+
+    $.post('/tweets', formData)
+      .then((res) => {
+      });
+  });
+
+  // const $button = $('#fetch-posts');
+  // $button.click(() => {
+  //   $.getJSON('/tweets')
+  //     .then((posts) => {
+  //       console.log(posts);
+  //       renderPosts(posts);
+  //     });
+  // });
 });
