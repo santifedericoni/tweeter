@@ -10,35 +10,11 @@
 
 $(document).ready(function() {
   const $form = $('form');
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
 
   const renderTweets = function(tweets) {
     // loops through tweets
     for (tweet of tweets) {
-      $('#tweets-container').append(createTweetElement(tweet));
+      $('#tweets-container').prepend(createTweetElement(tweet));
     }
   };
 
@@ -83,23 +59,25 @@ $(document).ready(function() {
     return $article;
   };
 
-  renderTweets(data);
-
   $form.on('submit', (event) => {
     event.preventDefault();
     const formData = $form.serialize();
 
     $.post('/tweets', formData)
       .then((res) => {
+        $('#tweet-text').val('');
+        $('#tweets-container').empty();
+        loadTweets();
       });
   });
+  
+  const loadTweets = () => {
+    $.get("/tweets")
+      .then((data) => {
+        renderTweets(data);
+      });
+  };
 
-  // const $button = $('#fetch-posts');
-  // $button.click(() => {
-  //   $.getJSON('/tweets')
-  //     .then((posts) => {
-  //       console.log(posts);
-  //       renderPosts(posts);
-  //     });
-  // });
+  loadTweets();
+
 });
