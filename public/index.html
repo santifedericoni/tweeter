@@ -53,11 +53,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class = "error">
+        <label >there was an error with the tweet</label>
+        </div>
         <form>
           <label>What are you humming about?</label>
           <textarea name="text"  id="tweet-text"></textarea>
           <footer>
-          <button type="submit">Tweet</button>
+          <button class = 'submit' type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
           </footer>
         </form>

@@ -62,13 +62,20 @@ $(document).ready(function() {
   $form.on('submit', (event) => {
     event.preventDefault();
     const formData = $form.serialize();
+    if (formData.length === 5) {
+      $('.error').css('visibility','visible');
+    } else if (formData.length > 145) {
+      $('.error').css('visibility','visible');
 
-    $.post('/tweets', formData)
-      .then((res) => {
-        $('#tweet-text').val('');
-        $('#tweets-container').empty();
-        loadTweets();
-      });
+    } else {
+      $('.error').css('visibility','hidden');
+      $.post('/tweets', formData)
+        .then((res) => {
+          $('#tweet-text').val('');
+          $('#tweets-container').empty();
+          loadTweets();
+        });
+    }
   });
   
   const loadTweets = () => {

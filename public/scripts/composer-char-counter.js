@@ -5,7 +5,11 @@ $(document).ready(function() {
   $('#tweet-text').keyup(function() {
     let text = $('#tweet-text').val();
     $('.counter').val(result - text.length);
-    text.length > 140 ?  $('.counter').css('color','red') : $('.counter').css('color','black');
+    if (text.length > 140) {
+      $('.counter').css('color','red');
+    } else {
+      $('.counter').css('color','black');
+    }
   });
 });
 
