@@ -1,12 +1,6 @@
 
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-//import { text } from "express";
 
 $(document).ready(function() {
   const $form = $('form');
@@ -40,9 +34,8 @@ $(document).ready(function() {
     $imgProfile.attr("src", tweetData.user.avatars);
     $labelTag.text(tweetData.user.handle);
     $labelTweet.text(tweetData.content.text);
-    $labelTimeAgo.text(new Date(tweetData.created_at));
+    $labelTimeAgo.text(moment(new Date(tweetData.created_at)).fromNow());
 
-    
     $divTag.append($labelTag);
 
     $divProfile.append($imgProfile, $labelName);
@@ -60,12 +53,14 @@ $(document).ready(function() {
   };
 
   $form.on('submit', (event) => {
+    $('.error').css('display','none');
+    $('.error2').css('display','none');
     event.preventDefault();
     const formData = $form.serialize();
     if (formData.length === 5) {
-      $('.error').css('visibility','visible');
+      $('.error').css('display','contents');
     } else if (formData.length > 145) {
-      $('.error').css('visibility','visible');
+      $('.error2').css('display','contents');
 
     } else {
       $('.error').css('visibility','hidden');

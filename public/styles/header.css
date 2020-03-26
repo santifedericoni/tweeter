@@ -25,5 +25,12 @@ header div {
     background-color: #e7a656;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   }
+
+  .userName {
+    padding: 0%;
+    margin-left: -10px;
+    margin-top: -40px;
+
+  }
   
 }

@@ -1,8 +1,4 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+
 html {
   box-sizing: border-box;
   font-family: "Bungee", cursive;
@@ -12,9 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
 
 body {
   height: 1000px;
@@ -35,8 +28,3 @@ main , .navBar{
   top: 150px;
   }
 
-
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

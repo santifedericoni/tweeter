@@ -1,5 +1,5 @@
 .new-tweet button {
-  background-color: rgb(47, 47, 212); /* Green */
+  background-color: rgb(47, 47, 212);
   border: none;
   padding: 10px 10px 10px 10px;
   color: white;
@@ -26,12 +26,12 @@
 }
 
 .error {
-  border: 3px solid darkred;
-  visibility: hidden;
+  display: none;
   color: red
 }
 
-/* 
-@media all and (max-width:600px){
+.error2 {
+  display: none;
+  color: red
+}
 
-} */
