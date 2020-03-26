@@ -1,9 +1,9 @@
 .nav {
   position: fixed;
   width: 100%;
-  height: 120;
+  height: 120px;
   z-index: 999;
-  background-color: #5a46f3;
+  background-color: #ed962b;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
 
@@ -20,4 +20,11 @@
 .navBar {
   display:  flex;
   justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    background-color: #5a46f3;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
 }
