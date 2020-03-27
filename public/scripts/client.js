@@ -63,7 +63,7 @@ $(document).ready(function() {
       $('.error2').css('display','contents');
 
     } else {
-      $('.error').css('visibility','hidden');
+      $('.error').css('display','none');
       $.post('/tweets', formData)
         .then((res) => {
           $('#tweet-text').val('');
