@@ -57,12 +57,14 @@ $(document).ready(function() {
     $('.error2').css('display','none');
     event.preventDefault();
     const formData = $form.serialize();
-    if (formData.length === 5) {
+    const text = replaceUnexpectedCharactersForSpaces(formData);
+    if (text.length === 0) {
+      console.log(text);
       $('.error').css('display','contents');
-    } else if (formData.length > 145) {
+    } else if (text.length > 140) {
       $('.error2').css('display','contents');
-
     } else {
+      console.log(text);
       $('.error').css('display','none');
       $.post('/tweets', formData)
         .then((res) => {
@@ -72,14 +74,43 @@ $(document).ready(function() {
         });
     }
   });
-  
+
+  //Show or hide the create a new tweet
+  const showNewTweet = function(position) {
+    $("#write-a-tweet").click(function() {
+      if (position === 'up') {
+        $(".tweet").slideDown();
+        position = 'down';
+      } else {
+        $(".tweet").slideUp();
+        position = 'up';
+      }
+      console.log(position);
+    });
+  };
+  //formData have %20 when the user input was an space, this function solve that problem.
+  const replaceUnexpectedCharactersForSpaces = function(data) {
+    let result = [];
+    for (let i = 5; i < data.length; i ++) {
+      if (data[i] === '%' && data[i + 1] === '2' && data[i + 2] === '0') {
+        result += ' ';
+        i += 2;
+      } else {
+        result += data[i];
+      }
+    }
+    return result;
+  };
+
   const loadTweets = () => {
     $.get("/tweets")
       .then((data) => {
         renderTweets(data);
       });
   };
-
+  showNewTweet('down');
   loadTweets();
 
 });
+
+

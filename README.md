@@ -15,6 +15,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-Parser
 
 
 !["Main Page"](https://github.com/santifedericoni/tweeter/blob/master/docs/Screen%20Shot%202020-03-26%20at%205.09.42%20PM.png)

@@ -35,45 +35,45 @@
     <nav>
       <div class="nav">
         <div class='navBar'>
-        <h1>TWEETER</h1>
-        <div>
-        <h2>Write a new tweet</h3>
-          <div class='arrow'>
-        <i class="fas fa-chevron-down"></i>
+          <h1>TWEETER</h1>
+          <div id = 'write-a-tweet'>
+            <h2>Write a new tweet</h3>
+            <div class='arrow'>
+              <i class="fas fa-chevron-down"></i>
           </div>
         </div>
-        </div>
+      </div>
       </div>
     </nav>
-<section class='bodySection'>
-    <header>
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class ='userName'>
-          <h2>Santi Federiconi</h2>
-      </div>
-  </header>
+    <section class='bodySection'>
+      <header>
+          <div>
+            <img src="/images/profile-hex.png"> 
+          </div>
+          <br>
+          <div class ='userName'>
+            <h2>Santi Federiconi</h2>
+          </div>
+        </header>
     <main class="container">
       <section class="new-tweet">
         <div >
-        <label class = "error">The tweet its empty</label>
-        <label class = "error2">The tweet have to be 140 max</label>
+          <label class = "error">The tweet its empty</label>
+          <label class = "error2">The tweet have to be 140 max</label>
         </div>
-        <form>
+        <form class = 'tweet'>
           <label>What are you humming about?</label>
           <textarea name="text"  id="tweet-text"></textarea>
           <footer>
-          <button class = 'submit' type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+            <button class = 'submit' type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
           </footer>
         </form>
       </section>
       <section id = 'tweets-container'>
       </section>
     </main>
-</section>
+  </section>
   </body>
 </html>
 
